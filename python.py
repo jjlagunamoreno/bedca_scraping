@@ -39,8 +39,8 @@ ws_nutrientes.append([
     "Componente", "Valor", "Unidad", "Fuente"
 ])
 
-# PROCESAR SOLO LOS DOS PRIMEROS GRUPOS
-for valor, nombre_grupo in grupos[:2]:
+# PROCESAR TODOS LOS GRUPOS
+for valor, nombre_grupo in grupos:
     try:
         driver.get("https://www.bedca.net/bdpub/index.php")
         wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Consulta"))).click()
